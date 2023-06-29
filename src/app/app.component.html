@@ -1,17 +1,57 @@
+<div class="node-calculator">
 
+  <div class="node-calculator__container">
 
-<style>
-  :host {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-    font-size: 14px;
-    box-sizing: border-box;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    text-align: center;
-  }
-</style>
+    <div class="node-calculator__container__column">
 
-<div class="content" role="main">
-  <h1>Welcome to {{title}}!</h1>
-  <h2>Start editing to see some magic happen</h2>
+      <div class="node-calculator__container__column__textfield">
+
+        <div class="node-calculator__container__column__textfield__label">
+          Ancho del árbol
+        </div>
+
+        <div class="node-calculator__container__column__textfield__input">
+          <input 
+            type="text" 
+            name="txt-width" 
+            id="txt-width" 
+            placeholder="0"
+            (keyup)="onKeyUp('width', $event)" />
+        </div>
+
+      </div>
+
+      <div class="node-calculator__container__column__textfield">
+
+        <div class="node-calculator__container__column__textfield__label">
+          Nivel del árbol
+        </div>
+
+        <div class="node-calculator__container__column__textfield__input">
+          <input 
+            type="text" 
+            name="txt-level" 
+            id="txt-level" 
+            placeholder="0"
+            (keyup)="onKeyUp('level', $event)" />
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="node-calculator__container__column--total-nodes">
+
+      <div class="node-calculator__container__column__total-nodes">
+
+        <div class="node-calculator__container__column__total-nodes__label">número de nodos</div>
+
+        <div class="node-calculator__container__column__total-nodes__value">{{nodes}}</div>
+
+      </div>
+
+    </div>
+
+  </div>
+
 </div>
